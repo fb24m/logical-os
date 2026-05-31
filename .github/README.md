@@ -8,7 +8,7 @@
 </div>
 
 
-<div style="display: flex">
+<div style="display: flex" align="center">
 
 <img src="Frame%2020.svg" alt="">
 
