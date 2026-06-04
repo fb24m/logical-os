@@ -2,11 +2,10 @@
 
 <div align="center">
   <img src="./Frame%2018%20(1).svg" alt="">
-      
-  <img src="./Unreasonably%20Logical.svg" alt="">
-    
 </div>
-
+<div align="center">
+  <img src="./Unreasonably%20Logical.svg" alt="">
+</div>
 
 <div style="display: flex" align="center">
 
@@ -22,24 +21,25 @@
     
 </div>
 
+**STATUS: VERY ALPHA.** NOT AFFILIATED with Fedora or Red Hat
 
-
-
-
-**What is this?**
 
 - Illogical Impulse-based OS || Fedora Remix with best hyprland rice ever preinstalled
-- Good option if you want to use Fedora with end-4's dotfiles
-
-**What you receive?**
-
 - Simpler graphical installation - no scripts or commands required
 - A user-friendly yet powerful system ready for any workload
+- KDE/GTK apps installation option
+- Preinstalled and configured fish and tools
 
 ### Build ISO
 
 ```bash
 git clone https://github.com/fb24m/logical-os && cd logical-os
+
+# build branding packages (delete the ~/rpmbuild directory before running this)
+./build_branding.sh
+
+cp ~/rpmbuild/RPMS/noarch/* ./packages/
+
 # build additional local repo
 ./download_deps.sh
 
@@ -49,4 +49,5 @@ git clone https://github.com/fb24m/logical-os && cd logical-os
 
 ### Credits
 
-[@end-4](https://github.com/end-4) and all illogical-impulse [contributors](https://github.com/end-4/dots-hyprland/graphs/contributors?from=2%2F28%2F2026)
+- [@end-4](https://github.com/end-4) and all illogical-impulse [contributors](https://github.com/end-4/dots-hyprland/graphs/contributors?from=2%2F28%2F2026)
+- [@3d3f](https://github.com/3d3f) for [sddm theme](https://github.com/3d3f/ii-sddm-theme)
