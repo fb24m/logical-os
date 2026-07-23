@@ -10,20 +10,21 @@ url --url=file:///run/install/repo/packages/
 network --bootproto=dhcp --device=link --activate --hostname=logicalos
 keyboard us
 lang en_US.UTF-8
+
+bootloader --location=none --append="rhgb quiet"
+
 reboot
 
-autopart --type=btrfs
-
 %packages
+@^illogical-impulse
+
 shim-x64
 grub2-efi-x64
 grub2-efi-x64-modules
 grub2-common
 grub2-tools
 grub2-tools-minimal
-dracut-live
 anaconda
-grub2-pc-modules
 btrfs-progs
 efibootmgr
 grub2-tools-extra
@@ -47,6 +48,8 @@ cp -r /run/install/repo/overlay/. /mnt/sysimage/
 %end
 
 %post
+grubby --update-kernel=ALL --args="rhgb quiet"
+
 dnf copr enable alternateved/eza
 dnf copr enable atim/starship
 dnf copr enable deltacopy/darkly
@@ -63,6 +66,4 @@ done
 
 plymouth-set-default-theme logical-os
 dracut -vf
-
-ln -s /usr/bin/doas /usr/bin/sudo
 %end

@@ -33,13 +33,12 @@ EXTRA_PACKAGES=(
     qt5-qtbase-gui
     qt5-qtdeclarative
     qt5-qtquickcontrols2
-
     qt5-qtwayland
+
     libX11
     libXcomposite
     mesa-libEGL
     mesa-libGL
-    qt5-qtbase-gui
 
     plasma-workspace
     plasma-integration
@@ -56,6 +55,9 @@ EXTRA_PACKAGES=(
     kernel
     kernel-core
     kernel-modules
+
+    elisa
+    lvm2
 )
 
 COPR_REPOS=(
@@ -93,7 +95,7 @@ fi
 
 all_packages=($packages "${EXTRA_PACKAGES[@]}")
 
-SKIP_PACKAGES=("quickshell" "quickshell-git" "hyprland-uwsm")
+SKIP_PACKAGES=("hyprland-uwsm")
 
 filtered=()
 
@@ -111,17 +113,13 @@ echo "==> Found $(echo $all_packages | wc -w) packages total"
 
 echo "==> Downloading x86_64 packages with dependencies..."
 
-export http_proxy="http://127.0.0.1:10808"
-export https_proxy="http://127.0.0.1:10808"
-export all_proxy="socks5://127.0.0.1:10808"
-
 dnf download --resolve --alldeps \
     --arch=x86_64 --arch=noarch \
     --destdir="$OUTPUT_DIR" \
     --setopt=install_weak_deps=False \
     --exclude="hyprland-uwsm" \
     "${REPO_FLAGS[@]}" \
-    --repo "fedora" --repo "updates" --repo "updates-testing" \
+    --repo "fedora" --repo "updates" --repo "logical-os" \
     "${filtered[@]}"
 
 

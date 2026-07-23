@@ -18,8 +18,6 @@ cp -rn ./append/. ./overlay/
 sudo lorax \
     --skip-branding \
     -i "logical-os-logos" \
-    -i "logical-os-logos-classic" \
-    -i "logical-os-logos-httpd" \
     -i "logical-os-release" \
     -i "logical-os-release-common" \
     -i "logical-os-release-identity-basic" \
@@ -56,5 +54,3 @@ sudo mkksiso \
     --add "$project_path/packages" \
     "./LogicalOS-44-raw.iso" \
     "./LogicalOS-44-final.iso"
-
-rm -rf ~/LogicalOS-44-raw.iso

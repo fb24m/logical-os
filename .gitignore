@@ -1,2 +1,17 @@
 packages/*.rpm
 packages/repodata
+
+debugdata
+lorax.log
+lorax.conf
+program.log
+pylorax.log
+original-pkgsizes.txt
+final-pkgsizes.txt
+pkglists
+build
+
+overlay/etc/skel/.*
+
+dots-hyprland
+*.iso
