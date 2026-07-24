@@ -377,6 +377,7 @@
     <grouplist>
         <groupid>core</groupid>
         <groupid>logical</groupid>
+        <groupid>chromium</groupid>
         <groupid>sound</groupid>
         <groupid>additional</groupid>
         <groupid>ii-basic</groupid>
@@ -389,7 +390,6 @@
         <groupid>widgets</groupid>
         <groupid>quickshell</groupid>
         <groupid>utilities</groupid>
-        <groupid>chromium</groupid>
     </grouplist>
 
     <optionlist>

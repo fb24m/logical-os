@@ -28,7 +28,7 @@ sudo lorax \
     --version=44 \
     --release=44 \
     --source=https://mirror.yandex.ru/fedora/linux/releases/44/Everything/x86_64/os/ \
-    --source="file://$HOME/rpmbuild/RPMS/noarch" \
+    --source=https://the-logical-os.github.io/repo-release \
     "$build_path"
 
 cd "$build_path"

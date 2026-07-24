@@ -64,7 +64,4 @@ for dir in /home/*/; do
     cp -r /etc/skel/. "$dir"
     chown -R "$(stat -c '%U' "$dir"):" "$dir"
 done
-
-plymouth-set-default-theme logical-os
-dracut -vf
 %end
