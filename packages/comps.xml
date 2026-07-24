@@ -320,6 +320,18 @@
   </group>
 
   <group>
+    <id>chromium</id>
+    <name>Chromium</name>
+    <description
+    >Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web</description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+        <packagereq type="mandatory">chromium</packagereq>
+    </packagelist>
+  </group>
+
+  <group>
     <id>plasma-toolkit</id>
     <name>KDE basic apps</name>
     <description
@@ -377,6 +389,7 @@
         <groupid>widgets</groupid>
         <groupid>quickshell</groupid>
         <groupid>utilities</groupid>
+        <groupid>chromium</groupid>
     </grouplist>
 
     <optionlist>
