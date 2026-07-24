@@ -364,6 +364,7 @@
 
     <grouplist>
         <groupid>core</groupid>
+        <groupid>logical</groupid>
         <groupid>sound</groupid>
         <groupid>additional</groupid>
         <groupid>ii-basic</groupid>
