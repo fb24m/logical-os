@@ -19,15 +19,23 @@
 
 `Logical OS uses illogical impulse. This may seem illogical. At first glance`
 
+<a href="https://github.com/the-logical-os/logical-os/releases/latest">DOWNLOAD LATEST ISO</a>
+
 </div>
 
-**STATUS: VERY ALPHA.** NOT AFFILIATED with Fedora or Red Hat
+**Status: (almost)stable.** NOT AFFILIATED with Fedora or Red Hat
 
 - Illogical Impulse-based OS || Fedora Remix with illogical-impulse preinstalled
 - Simpler graphical installation - no scripts or commands required
 - A user-friendly yet powerful system ready for any workload
 - KDE/GTK apps installation option
 - Preinstalled and configured fish and tools
+
+| <div align="left">fastfetch</div> | <div align="left">plymouth loading screen</div> | 
+|-|-|
+| <img src="fastfetch.png" alt=""> | <img src="plymouth.png" alt=""> |
+| **sddm theme** | **illogical-impulse desktop** | 
+| <img src="sddm.png" alt=""> | <img src="ii.png" alt=""> |
 
 ### Build ISO
 
